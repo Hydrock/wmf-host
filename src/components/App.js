@@ -1,4 +1,5 @@
 import React, { Component, Suspense } from 'react';
+import { SimpleComponent } from './SimpleComponent';
 import { ErrorBoundary } from './ErrorBoundary';
 
 const RemoteComponent = React.lazy(() => import('remoteApp/RemoteComponent')); // https://ru.reactjs.org/docs/code-splitting.html#reactlazy
@@ -11,14 +12,16 @@ class App extends Component {
         return (
             <div>
                 <h1>
-                    My React App! (Host)
+                    React App (Host)
                 </h1>
+                <SimpleComponent />
                 <ErrorBoundary>
                     <Suspense fallback={<div>Загрузка...</div>}>
                         <RemoteComponent />
                     </Suspense>
                     <div/>
                 </ ErrorBoundary>
+                <SimpleComponent />
             </div>
         );
     }

@@ -26,6 +26,16 @@ module.exports = {
             name: 'hostApp',
             remotes: {
                 remoteApp: 'remoteApp@http://localhost:8082/remoteEntry.js',
+            },
+            shared: {
+                react: {
+                    eager: true,
+                    singleton: true,
+                },
+                "react-dom": {
+                    eager: true,
+                    singleton: true,
+                },
             }
         }),
         new HtmlWebpackPlugin({
