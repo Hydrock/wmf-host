@@ -17,13 +17,13 @@ git clone https://github.com/Hydrock/wmf-remote.git
 **II)** Установите зависимости в каждом приложении:
 
 ```bash
-yarn install
+npm install
 ```
 
 **III)** Запустите оба приложения 
 
 ```bash
-yarn start
+npm run start
 ```
 
 **Host** приложение будет запущено на порту **8081**.
